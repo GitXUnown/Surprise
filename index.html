@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Little Surprise</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="hearts" aria-hidden="true"></div>
+
+  <div id="frameOverlay" class="bday-frame" aria-hidden="true">
+    <div class="bunting"></div>
+    <div class="lights"></div>
+    <div class="cake-sticker">🤗</div>
+  </div>
+
+  <div id="page2Decor" class="page2-decor hidden" aria-hidden="true"></div>
+
+  <section id="start" class="start-screen">
+    <div class="card">
+      <div class="date-card">
+        <span class="date">25 - 12</span>
+        <p class="date-text"></p>
+      </div>
+
+      <div class="emoji">🎀</div>
+      <h1>As You Said, It’s Your First Kid’s Birthday.</h1>
+      <p>Tap on start for your surprise </p>
+      <button id="startBtn" class="btn">Start </button> <br>
+      <small class="hint">Tip: turn on sound for extra cuteness </small>
+    </div>
+  </section>
+
+  <section id="crash" class="crash-screen hidden">
+    <div class="crash-card">
+      <div class="crash-emoji">💥</div>
+      <h1>Oops… Page Crashed</h1>
+      <p class="crash-msg">Reason: <b>Over Cuteness Overload</b> 🎀</p>
+
+      <div class="crash-bar">
+        <div class="crash-fill" id="crashFill"></div>
+      </div>
+
+      <small class="crash-hint">Rebooting Cuteness Engine…</small>
+      <p class="countdown" id="countdownText">Restart Available in 5s…</p>
+
+      <button id="rebootBtn" class="btn" disabled>Restart in Cute Mode </button>
+    </div>
+  </section>
+
+  <main id="main" class="hidden">
+    <header class="hero hero-center">
+      <div class="hero-card">
+        <h1 id="typedTitle"></h1>
+        <p class="sub">Another Year Older, Another Year of Good Moments 🧿</p>
+
+        <div class="hero-actions">
+          <button id="confettiBtn"  class="btn ghost">Pop Confetti </button>
+          <button id="celebrateBtn" class="btn">Let's Celebrate </button>
+        </div>
+      </div>
+    </header>
+
+    <section id="page2" class="hidden">
+      <section class="section gallery">
+        <h2>“Little Things That Make You Smile Currently 💙 ..."</h2>
+        <div class="grid">
+          <figure class="photo" data-full="assets/Photo1.png">
+            <img src="assets/Photo1.png" alt="Happens Word Photo">
+            <figcaption>Chai Makes Everything Better...🥶</figcaption>
+          </figure>
+
+          <figure class="photo" data-full="assets/Photo2.png">
+            <img src="assets/Photo2.png" alt="Depends">
+            <figcaption>Edh Ayina Favourite Chepu Kadha Antey...(Happens)☃️</figcaption>
+          </figure>
+
+          <figure class="photo" data-full="assets/Photo3.png">
+            <img src="assets/Photo3.png" alt="Memory photo 3">
+            <figcaption>Wishes From Your Little Moomin... </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section surprise">
+        <h2>Final Surprise</h2>
+        <p>Open this letter… it’s just for you </p>
+
+        <div class="envelope-wrap">
+          <button id="openLetterBtn" class="envelope" aria-label="Open letter" type="button">
+            <div class="env-body"></div>
+            <div class="env-flap"></div>
+            <div class="env-heart">🎀 ྀིྀི</div>
+
+            <div class="letter">
+              <h3>Dear</h3>
+              <p>
+                Happy Birthday ! <br><br>
+                You make everything around you feel lighter, happier, and more positive, and I’m truly grateful for you for your kindness and the warmth you bring. 
+                I know the effort you’ve taken is something I could never match, and from no where, our paths crossed in a way that made things feel easier in our own way. 
+                I might have missed watching "Jab We Met" if you hadn’t messaged me, so thank you for suggesting the movies you watch and for sharing those little things. 
+                Even if I forget many things, I don’t forget the value of being understood. 
+                Thank you for sharing everything and for checking on me every day. Have a truly great birthday.
+              </p>
+              <p class="signature">— 💙</p>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>Made With Care, Just For You (Version 1.0 — See You Next Year)</span>
+      </footer>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true">
+    <div class="lightbox-content">
+      <button id="closeLb" class="lb-close" aria-label="Close">✕</button>
+      <img id="lbImg" src="" alt="Expanded photo">
+    </div>
+  </div>
+
+  <canvas id="confetti"></canvas>
+
+  <div id="balloons" class="balloons" aria-hidden="true"></div>
+
+  <audio id="bgMusic" src="assets/Song.MP3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
